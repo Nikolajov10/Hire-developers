@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <!-- Boostrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--My files-->
+    <link rel="stylesheet" type="text/css" href="styles/createUser.css">
+    <script src="scripts/edit.js"></script>
+    <script src="scripts/createNav.js"></script>
+</head>
+
+<body>
+    <div id="nav">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1">
+                <h3 align="center">Edit User</h3>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+                        <small>Format example: +381-621231234</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Upload profile picture</label>
+                        <input type="file" class="form-control" id="img" accept="image/">
+                        <input type="url" id="img_url" placeholder="Or insert image url" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price per hour</label>
+                        <input type="number" class="form-control" id="price" placeholder="Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="technology">Technology</label>
+                        <select class="form-control" id="technology" required>
+                            <option>Javascript</option>
+                            <option>Java</option>
+                            <option>.NET</option>
+                            <option>Flutter</option>
+                            <option>Python</option>
+                            <option>PHP</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of experience</label>
+                        <input type="number" class="form-control" id="experience" placeholder="Experience" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select class="form-control" id="language" required>
+                            <option>English</option>
+                            <option>Serbian</option>
+                            <option>Bulgarian</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin_url">Linkedin profile link</label>
+                        <input type="url" id="linkedin_url" placeholder="Linkedin" class="form-control">
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-2 offset-sm-5 padding">
+                <div id="error" class="padding">
+                </div>
+                <input type="submit" class="btn btn-info" value="Edit user" onclick="editUser()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
